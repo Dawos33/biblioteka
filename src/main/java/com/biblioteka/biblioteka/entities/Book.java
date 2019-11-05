@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "ksiazka")
 public class Book {
+    @GeneratedValue
     @Id
     @Column(name = "id_ksiazka")
     private Integer id;
@@ -53,6 +54,11 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public Book withIsbn(final String isbn){
+        this.isbn = isbn;
+        return this;
     }
 
     public String getTitle() {

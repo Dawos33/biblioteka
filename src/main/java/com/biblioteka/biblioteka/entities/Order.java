@@ -6,6 +6,7 @@ import java.util.List;
 @Entity
 @Table(name = "zamowienie")
 public class Order {
+    @GeneratedValue
     @Id
     @Column(name = "id_zamowienie")
     private Integer id;

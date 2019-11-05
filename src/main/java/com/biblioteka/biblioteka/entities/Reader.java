@@ -6,7 +6,7 @@ import java.util.List;
 @Entity
 @Table(name = "czytelnik")
 public class Reader {
-
+    @GeneratedValue
     @Id
     @Column(name = "id_czytelnik")
     private Integer id;

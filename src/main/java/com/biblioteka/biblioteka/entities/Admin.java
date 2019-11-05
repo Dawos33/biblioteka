@@ -1,13 +1,11 @@
 package com.biblioteka.biblioteka.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "administrator")
 public class Admin {
+    @GeneratedValue
     @Id
     @Column(name = "id_administrator")
     private Integer id;

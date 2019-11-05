@@ -1,13 +1,11 @@
 package com.biblioteka.biblioteka.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "bibliotekarz")
 public class Liberian {
+    @GeneratedValue
     @Id
     @Column(name = "id_bibliotekarz")
     private Integer id;

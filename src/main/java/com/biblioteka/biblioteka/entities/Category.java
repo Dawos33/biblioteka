@@ -7,6 +7,7 @@ import java.util.List;
 @Table(name = "kategoria")
 public class Category {
 
+    @GeneratedValue
     @Id
     @Column(name = "id_kategoria")
     private Integer id;
