@@ -1,10 +1,8 @@
-package com.biblioteka.biblioteka.entities;
+package com.biblioteka.entities;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrderRepository extends CrudRepository<Order, Integer> {
-
-
+public interface AdminRepository extends CrudRepository<Admin, Integer> {
 }

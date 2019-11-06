@@ -1,10 +1,11 @@
-package com.biblioteka.biblioteka.controllers;
+package com.biblioteka.controllers;
 
-import com.biblioteka.biblioteka.entities.Book;
-import com.biblioteka.biblioteka.entities.BookRepository;
-import com.biblioteka.biblioteka.services.BookService;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import com.biblioteka.entities.Book;
+import com.biblioteka.entities.BookRepository;
+import com.biblioteka.services.BookService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
@@ -22,7 +23,7 @@ public class PageTesterController {
         return "Hello World";
     }
 
-    @GetMapping("/addBook")
+    /*@GetMapping("/addBook")
     @ResponseStatus(value = HttpStatus.CREATED, reason = "Book created!")
     @ResponseBody
     public void addBook(@RequestParam("isbn") String isbn,
@@ -33,12 +34,12 @@ public class PageTesterController {
                         @RequestParam("publishingYear") Integer publishingYear,
                         @RequestParam(value = "description", required = false) String description) {
         bookService.addBook(isbn, title, authorName, authorSurname, publishingHouse, publishingYear, description);
-    }
+    }*/
 
-    @PostMapping(path = "/addBook2")
+    /*@PostMapping(path = "/addBook2")
     public void addBook2(@RequestBody String isbn, String title, String authorName, String authorSurname, String publishingHouse, Integer publishingYear, String description) {
         bookService.addBook(isbn, title, authorName, authorSurname, publishingHouse, publishingYear, description);
-    }
+    }*/
 
     @RequestMapping("/dbTest")
     //@RequestBody

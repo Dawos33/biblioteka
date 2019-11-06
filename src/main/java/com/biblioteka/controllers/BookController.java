@@ -1,7 +1,7 @@
-package com.biblioteka.biblioteka.controllers;
+package com.biblioteka.controllers;
 
-import com.biblioteka.biblioteka.entities.BookRepository;
-import com.biblioteka.biblioteka.services.BookService;
+import com.biblioteka.entities.BookRepository;
+import com.biblioteka.services.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

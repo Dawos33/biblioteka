@@ -1,4 +1,4 @@
-package com.biblioteka.biblioteka.commons;
+package com.biblioteka.commons;
 
 import java.util.ArrayList;
 import java.util.List;

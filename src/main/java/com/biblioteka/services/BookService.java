@@ -1,8 +1,8 @@
-package com.biblioteka.biblioteka.services;
+package com.biblioteka.services;
 
-import com.biblioteka.biblioteka.commons.GenericBuilder;
-import com.biblioteka.biblioteka.entities.Book;
-import com.biblioteka.biblioteka.entities.BookRepository;
+import com.biblioteka.commons.GenericBuilder;
+import com.biblioteka.entities.Book;
+import com.biblioteka.entities.BookRepository;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.biblioteka.biblioteka.entities;
+package com.biblioteka.entities;
 
 import javax.persistence.*;
 import java.util.List;

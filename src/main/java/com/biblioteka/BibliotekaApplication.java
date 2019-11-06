@@ -1,4 +1,4 @@
-package com.biblioteka.biblioteka;
+package com.biblioteka;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
