@@ -1,6 +1,7 @@
 package com.biblioteka.entities;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -19,16 +20,16 @@ public class Order {
     private Reader reader;
 
     @Column(name = "data_zamowienia")
-    private String isbn;
+    private Date orderDate;
 
     @Column(name = "data_odbioru")
-    private String title;
+    private Date receptionDate;
 
     @Column(name = "data_zwrotu")
-    private String authorName;
+    private Date returnDate;
 
     @Column(name = "termin_zwrotu")
-    private String authorSurname;
+    private Date deadline;
 
     public Integer getId() {
         return id;
@@ -54,36 +55,36 @@ public class Order {
         this.reader = reader;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public Date getOrderDate() {
+        return orderDate;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 
-    public String getTitle() {
-        return title;
+    public Date getReceptionDate() {
+        return receptionDate;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setReceptionDate(Date receptionDate) {
+        this.receptionDate = receptionDate;
     }
 
-    public String getAuthorName() {
-        return authorName;
+    public Date getReturnDate() {
+        return returnDate;
     }
 
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
+    public void setReturnDate(Date returnDate) {
+        this.returnDate = returnDate;
     }
 
-    public String getAuthorSurname() {
-        return authorSurname;
+    public Date getDeadline() {
+        return deadline;
     }
 
-    public void setAuthorSurname(String authorSurname) {
-        this.authorSurname = authorSurname;
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
 
     @Override
@@ -92,10 +93,10 @@ public class Order {
                 "id=" + id +
                 ", books=" + books +
                 ", reader=" + reader +
-                ", isbn='" + isbn + '\'' +
-                ", title='" + title + '\'' +
-                ", authorName='" + authorName + '\'' +
-                ", authorSurname='" + authorSurname + '\'' +
+                ", isbn='" + orderDate + '\'' +
+                ", title='" + receptionDate + '\'' +
+                ", authorName='" + returnDate + '\'' +
+                ", authorSurname='" + deadline + '\'' +
                 '}';
     }
 }

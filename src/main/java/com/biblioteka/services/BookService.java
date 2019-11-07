@@ -5,6 +5,8 @@ import com.biblioteka.entities.Book;
 import com.biblioteka.entities.BookRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class BookService {
 
@@ -26,7 +28,11 @@ public class BookService {
                 .with(Book::setPublishingYear, publishingYear)
                 .with(Book::setDescription, description)
                 .build());
+    }
 
+    public Book findBookById(Integer id){
+        Optional<Book> book = bookRepository.findById(id);
+        return book.orElse(null);
     }
 
 }
