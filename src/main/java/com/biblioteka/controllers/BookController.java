@@ -25,8 +25,10 @@ public class BookController {
                         @RequestParam("authorSurname") String authorSurname,
                         @RequestParam("publishingHouse") String publishingHouse,
                         @RequestParam("publishingYear") Integer publishingYear,
-                        @RequestParam(value = "description", required = false) String description) {
-        bookService.addBook(isbn, title, authorName, authorSurname, publishingHouse, publishingYear, description);
+                        @RequestParam(value = "description", required = false) String description,
+                        @RequestParam("id_kategoria") Integer idCategory,
+                        @RequestParam(value = "id_order", required = false) Integer idOrder) {
+        bookService.addBook(isbn, title, authorName, authorSurname, publishingHouse, publishingYear, description, idCategory, idOrder);
     }
     @GetMapping("/search")
     public List getBookByAuthorOrTitle(@RequestParam(value = "authorSurname", required = false) String authorSurname,

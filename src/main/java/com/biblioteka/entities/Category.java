@@ -1,6 +1,7 @@
 package com.biblioteka.entities;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,9 +13,9 @@ public class Category {
     @Column(name = "id_kategoria")
     private Integer id;
     @OneToMany (fetch = FetchType.LAZY, mappedBy = "category")
-    private List<Book> books;
+    private List<Book> books = new ArrayList<Book>();
 
-    @Column(name = "nazawa_kategorii")
+    @Column(name = "nazwa_kategorii")
     private String categoryName;
 
     public Integer getId() {
