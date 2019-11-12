@@ -43,4 +43,8 @@ public class BookService {
         return book.orElse(null);
     }
 
+    public void deleteBook (Integer id){
+        bookRepository.deleteBookById(id);
+    }
+
 }

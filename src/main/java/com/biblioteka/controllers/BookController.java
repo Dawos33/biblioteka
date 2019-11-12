@@ -1,10 +1,12 @@
 package com.biblioteka.controllers;
 
+import com.biblioteka.entities.Book;
 import com.biblioteka.entities.BookRepository;
 import com.biblioteka.services.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -30,6 +32,16 @@ public class BookController {
                         @RequestParam(value = "id_order", required = false) Integer idOrder) {
         bookService.addBook(isbn, title, authorName, authorSurname, publishingHouse, publishingYear, description, idCategory, idOrder);
     }
+
+    @PostMapping("/updateBook")
+    public void updateBook(@Valid @RequestBody Book book){
+        bookRepository.save(book);
+    }
+    @DeleteMapping(value = "/book/{id}")
+    public void deleteBokk (@PathVariable("id") Integer id){
+        bookService.deleteBook(id);
+    }
+
     @GetMapping("/search")
     public List getBookByAuthorOrTitle(@RequestParam(value = "authorSurname", required = false) String authorSurname,
                                        @RequestParam(value = "title", required = false) String title){
