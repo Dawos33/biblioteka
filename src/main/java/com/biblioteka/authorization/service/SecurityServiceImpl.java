@@ -11,14 +11,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SecurityServiceImpl {
+public class SecurityServiceImpl implements SecurityService{
     private final AuthenticationManager authenticationManager;
 
     private final UserDetailsService userDetailsService;
 
     private static final Logger logger = LoggerFactory.getLogger(SecurityServiceImpl.class);
 
-    public SecurityServiceImpl(AuthenticationManager authenticationManager, @Qualifier("userDetailsServiceImp") UserDetailsService userDetailsService) {
+    public SecurityServiceImpl(@Qualifier("customAuthenticationManager") AuthenticationManager authenticationManager, UserDetailsService userDetailsService) {
         this.authenticationManager = authenticationManager;
         this.userDetailsService = userDetailsService;
     }
