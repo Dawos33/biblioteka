@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        password: spyrosoft
+        url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/biblioteka?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: none
